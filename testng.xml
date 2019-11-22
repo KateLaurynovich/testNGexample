@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestNGXMLTest Test Suite">
+    <parameter name="first-name" value="Cedric"/>
+    <test name="TestNGXMLTest 1!">
+        <groups>
+            <run>
+                <include name="functest"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="BaseTest"/>
+        </classes>
+    </test>
+
+    <test name="TestNGXMLTest 2!!">
+        <groups>
+            <run>
+                <include name="checkintest"/>
+                <exclude name="functest"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="BaseTest"/>
+        </classes>
+    </test>
+    <test name="TestNGXMLTest 3!!!">
+        <classes>
+            <class name="BaseTest"/>
+        </classes>
+    </test>
+    <test name="TestNGXMLTest 4!!!">
+        <classes>
+            <class name="parent.ChildClass"/>
+        </classes>
+    </test>
+</suite>
